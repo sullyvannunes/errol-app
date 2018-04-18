@@ -5,14 +5,14 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: pg
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.pg
-  username: root
+  database: errol_development
+  username: sullyvan
   password: 
 
 # Warning: The database defined as "test" will be erased and
@@ -20,12 +20,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.pg
-  username: root
+  database: errol_test
+  username: sullyvan
   password: 
 
 production:
   <<: *default
-  database: db/production.pg
+  database: errol
   username: usu_prod_pg_db
   password: U$u_pr0d!_pg_db
