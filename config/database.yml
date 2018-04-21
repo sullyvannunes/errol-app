@@ -23,9 +23,3 @@ test:
   database: errol_test
   username: sullyvan
   password: 
-
-production:
-  <<: *default
-  database: errol
-  username: usu_prod_pg_db
-  password: U$u_pr0d!_pg_db
